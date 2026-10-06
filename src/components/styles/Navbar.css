@@ -1,0 +1,52 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+
+}
+.logo{
+    font-size: 1.8rem;
+    color: rgb(249, 5, 5);
+    font-weight: 700;
+       
+}
+.logo span{
+    color: white;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links li{
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-links li:hover{
+    color:chocolate;
+}
+.join-btn{
+    background: linear-gradient(90deg, #ff6b6b, #ff3300);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    color: rgb(244, 241, 241);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.join-btn:hover{
+    background: linear-gradient(90deg, #ff3300, #ff6b6b);
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgb(200, 79, 79);
+}

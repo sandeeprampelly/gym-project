@@ -1,0 +1,114 @@
+.contact{
+    position: relative;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid #ff6b00;
+    width: 70%;
+    max-width: 750px;
+    display: flex;
+    margin: 60px auto;
+    box-shadow: 0 0 20px rgba(228, 224, 224, 0.5);
+    
+    
+}
+
+.contact-overlay{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 60px;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-in-out;
+}
+.contact h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6b00;
+}
+.contact h2 span{
+    color: #fff;
+}
+.contact p{
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 1.rem;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-group{
+    display: flex;
+    gap: 20px;
+
+}
+.input-group input{
+    flex: 1;
+    
+}
+input, textarea{
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid #ff6b00;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    transition:  all0.3s ease-in-out;
+    outline: none;
+}
+input:focus, textarea:focus{
+    border-color: #fff;
+    box-shadow: 0 0 10px #ff6b00;
+}
+textarea{
+    resize: none;
+    min-height: 120px;
+}
+
+.contact button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ff6b00;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+.contact button:hover{
+    background: #fff;
+    color: #ff6b00;
+    box-shadow: 0 0 10px #ff6b00;
+    
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .input-group{
+        flex-direction: column;
+    }
+    .contact-overlay{
+        padding: 40px 25px;
+
+    }
+    .contact h2{
+        font-size: 1.5rem;
+    }
+}

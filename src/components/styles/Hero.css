@@ -1,0 +1,327 @@
+/*.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url(https://media.istockphoto.com/id/1391410249/photo/sports-and-gym-activities.jpg?s=612x612&w=0&k=20&c=1S-hAmT-CkRtdYV_hcKi1lZdQkXAN_mCy3ebIXlUEnE=) center/cover no-repeat;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: radial-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.hero.overlay{
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+.hero-title{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow:  rgb(247, 3, 3);
+}
+.hero-title span{
+    color: rgb(247, 3, 3);
+    text-shadow: 0 0 10px rgb(247, 3, 3);
+}
+.hero-subtitle{
+    font-size: 1.5rem;
+   max-width: 700px;
+   margin: 0 auto 40px;
+   line-height: 1.5;
+
+}
+.btn-primary,.btn-secondary{
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+
+}
+.btn-primary{
+    background: linear-gradient(90deg, #ff3300, #ff6b6b);
+    border: none;
+    color: white;
+    box-shadow: 0 0 25px rgb(200, 79, 79);
+}
+.btn-secondary{
+    background: rgb(243, 5, 5);
+    border: 2px solid rgb(247, 3, 3);
+    color: rgb(247, 242, 242);
+    box-shadow: 0 0 25px rgb(200, 79, 79);
+}
+.btn-primary :hover{
+    background: linear-gradient(90deg, #f4eeee, #f0eceb);
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgb(200, 79, 79);
+
+}
+.btn-secondary:hover{
+    background: linear-gradient(90deg, #f4eeee, #f0eceb);
+    border: 2px solid rgb(247, 3, 3);
+    color: rgb(247, 3, 3);
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes floatText {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+   
+    
+}*/
+
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: url("https://media.istockphoto.com/id/1391410249/photo/sports-and-gym-activities.jpg?s=612x612&w=0&k=20&c=1S-hAmT-CkRtdYV_hcKi1lZdQkXAN_mCy3ebIXlUEnE=")
+        center / cover no-repeat;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.6)
+    );
+
+    z-index: 1;
+}
+
+/* Hero content */
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+
+    /* Keyframe animation */
+    animation: floatText 2s ease-in-out infinite;
+}
+
+.hero-title span {
+    color: rgb(247, 3, 3);
+
+    text-shadow:
+        0 0 10px rgb(247, 3, 3),
+        0 0 20px rgba(247, 3, 3, 0.6);
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    line-height: 1.5;
+
+    color: white;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+
+    padding: 12px 30px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    margin: 10px;
+}
+
+/* Primary Button */
+.btn-primary {
+    background: linear-gradient(90deg, #ff3300, #ff6b6b);
+
+    border: 2px solid transparent;
+
+    color: white;
+
+    box-shadow: 0 0 20px rgba(255, 51, 0, 0.6);
+}
+
+/* Primary Button Hover */
+.btn-primary:hover {
+    background: white;
+
+    color: #ff3300;
+
+    border: 2px solid #ff3300;
+
+    transform: translateY(-5px) scale(1.08);
+
+    box-shadow:
+        0 0 15px #ff3300,
+        0 0 30px rgba(255, 51, 0, 0.6);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background: #f30505;
+
+    border: 2px solid #f70303;
+
+    color: white;
+
+    box-shadow: 0 0 20px rgba(247, 3, 3, 0.6);
+}
+
+/* Secondary Button Hover */
+.btn-secondary:hover {
+    background: white;
+
+    color: #f70303;
+
+    border: 2px solid #f70303;
+
+    transform: translateY(-5px) scale(1.08);
+
+    box-shadow:
+        0 0 15px #f70303,
+        0 0 30px rgba(247, 3, 3, 0.6);
+}
+
+/* Button click effect */
+.btn-primary:active,
+.btn-secondary:active {
+    transform: scale(0.95);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes floatText {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .btn-buttons {
+        flex-direction: column;
+        gap: 10px;
+
+    }
+    .btn-primary,
+    .btn-secondary {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero h1{
+        font-size :2rem;
+        
+
+    }
+}
